@@ -33,8 +33,6 @@ class TestSetup(APITestCase):
 
         token = res.data.get('jwt')
         res = self.client.get(self.login_url, format='json', **{'HTTP_COOKIE': f'jwt={token}'})
-        import pdb
-        pdb.set_trace()
         self.assertEqual(res.status_code, 200)
     def test_logout_verified(self):
         res = self.client.post(self.signin_url, self.user_data, format='json')
