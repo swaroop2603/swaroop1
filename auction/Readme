@@ -1,3 +1,0 @@
-run the app my using python manage.py runserver
-//users -gives all 4 types post,get,put,delete
-//users/<int:pk> will give specific id value and delete the specific id
