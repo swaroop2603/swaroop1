@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+Installation instructions for Windows
+Create virtual environment
+python3 -m venv env
 
-You can use the [editor on GitHub](https://github.com/swaroop2603/swaroop1/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Activate environment
+env/scripts/activate
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+create tables using migrations
+python manage.py makemigrations
 
-```markdown
-Syntax highlighted code block
+python manage.py migrate
 
-# Header 1
-## Header 2
-### Header 3
+start server locally
+python manage.py runserver
 
-- Bulleted
-- List
+Api URLs
+ for admin page 'http://127.0.0.1:8000/admin/' credentials:username=swaroop,password=Rohit@2645
+for signin (post)  'http://127.0.0.1:8000/signin/'
+for login (get) 'http://127.0.0.1:8000/'login/'
+for token generation (post) 'http://127.0.0.1:8000/token/'
+for logout (post)  'http://127.0.0.1:8000/logout/'  
+for email update (put) 'http://127.0.0.1:8000/update_email/'
+for password update (put) 'http://127.0.0.1:8000/update_password/
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/swaroop2603/swaroop1/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+End points:
+    user_id (integer field)
+    username(char field)
+    email(email field)
+    password(char field)
